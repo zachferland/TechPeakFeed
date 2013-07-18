@@ -1,1 +1,45 @@
-Hello
+
+<section class="content">
+
+
+<div class="recent-post">
+  <p>Most Recent Posts By TechPeakers</p>
+</div>
+
+    <% for entry in FeedEntry.all(:limit => 100, :order => "published_at desc") %>
+<div  class="post">
+      <div class="pub-image">
+      <% for person in Publisher.where(:id => entry.publisher_id) %>
+        <%= image_tag person.image %>
+      <% end %>
+      </div>
+      <div class="text-container">
+      <h2><%= link_to h(entry.name), entry.url %></h2>
+      <p><%=h truncate(entry.summary, :length => 210)%>.</p>
+      <div class="button-blue"> 
+        <%= link_to "Read More", entry.url%>
+      </div>
+
+      </div>
+  </div>
+    <% end %>
+
+
+</section>
+
+
+    <section class="menu">
+      <div class="menu-img">
+        <div id="logo"></div>
+        <div id="description">
+          <p>A blog feed of all the individuals and teams participating in the current class of TechPeaks</p>
+        </div>
+        <div class="button-blue">
+          <%= link_to "Learn More", "http://techpeaks.eu"%>
+        </div>
+
+        <div id="built-by">
+          <p>Built by <%= link_to "@zachferland", "https://twitter.com/zachferland"%> in Trento, Italy</p>
+        </div>
+      </div>
+    </section>
