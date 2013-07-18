@@ -9,7 +9,7 @@
     <% for entry in FeedEntry.all(:limit => 100, :order => "published_at desc") %>
 <div  class="post">
       <div class="pub-image">
-      <% for person in Publisher.where(:id => entry.publisher_id) %>
+      <% for person in User.where(:id => entry.publisher_id) %>
         <%= image_tag person.image %>
       <% end %>
       </div>

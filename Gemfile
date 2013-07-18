@@ -10,6 +10,8 @@ gem 'pg'
 
 gem 'thin'
 
+gem 'feedzirra'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

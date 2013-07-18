@@ -164,7 +164,11 @@ body {
 	  font-weight: normal;
 	  margin-top: 1em;
 	  text-decoration: none;
-	  &:hover {color: #3f8cec }
+	  line-height: 1.2em;
+	  &:hover {
+	  	color: #3f8cec;
+	  	background-color: none; 
+	  }
 	}
 
 	.button-blue a{
