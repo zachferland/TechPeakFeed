@@ -18,3 +18,5 @@ User.create(name: 'Giancarlo Frison', image: 'giancarlo-frison.png', feed: 'http
 User.create(name: 'Nejc Škoberne', image: 'nejc-skoberne.png', feed: 'http://nejc.skoberne.net/feed/')
 
 User.create(name: 'Pavel Šimeček', image: 'pavel-simecek.png', feed: 'http://blog.pavelsimecek.cz/?feed=rss2')
+
+User.create(name: 'Melissa Perri', image: 'melissa-perri.png', feed: 'http://melissaperri.tumblr.com/rss')
