@@ -27,15 +27,15 @@ User.create(name: 'Antonio La Barba', image: 'antonio-labarba.png', feed: 'http:
 
 User.create(name: 'Damiano Gui', image: 'damiano-gui.png', feed: 'https://medium.com/feed/@damianogui/')
 
-# User.create(name: "Simone D'Amico", image: 'simone-damico.png', feed: 'http://feeds.feedburner.com/mightypirate/kWiJ?format=xml')
+User.create(name: "Simone D'Amico", image: 'simone-damico.png', feed: 'http://feeds.feedburner.com/mightypirate/kWiJ?format=xml')
 
 User.create(name: "Fannabee", image: 'fannabee.png', feed: 'http://blog.fannabee.com/rss')
 
-# User.create(name: "Klemen Hrovat", image: 'klemen-hrovat.png', feed: 'http://klemenhrovat.blogspot.com/feeds/posts/default')
+User.create(name: "Klemen Hrovat", image: 'klemen-hrovat.png', feed: 'http://klemenhrovat.blogspot.com/feeds/posts/default')
 
-# User.create(name: "Alessandro Marchesini", image: 'alessandro-m.png', feed: 'http://amarchesini.blogspot.com/feeds/posts/default')
+User.create(name: "Alessandro Marchesini", image: 'alessandro-m.png', feed: 'http://amarchesini.blogspot.com/feeds/posts/default')
 
-# User.create(name: "Daria Batukhtina", image: 'daria-Batukhtina.png', feed: 'http://amarchesini.blogspot.com/feeds/posts/default')
+User.create(name: "Daria Batukhtina", image: 'daria-Batukhtina.png', feed: 'http://amarchesini.blogspot.com/feeds/posts/default')
 
 
 

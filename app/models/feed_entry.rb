@@ -2,9 +2,9 @@ include ActionView::Helpers::SanitizeHelper
 
 class FeedEntry < ActiveRecord::Base
 
-	belongs_to :user
+  belongs_to :user
 
-  require 'htmlentities'
+  # require 'htmlentities'
 
   def self.fetch_feed
   	User.all.each do |user|
@@ -27,7 +27,11 @@ class FeedEntry < ActiveRecord::Base
   def self.add_entries(entries, user)
   	entries.each do |entry|
       unless exists? :guid => entry.id
-      	stripped_summary = strip_tags(entry.summary)
+      	#atom must acess content, while rss should acess summary
+      	post_content = entry.summary
+      	post_content = entry.content if post_content.nil?
+
+      	stripped_summary = strip_tags(post_content)
       	decoder = HTMLEntities.new
       	decoded_summary = decoder.decode(stripped_summary)
         create!(
