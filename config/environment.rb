@@ -5,4 +5,4 @@ require File.expand_path('../application', __FILE__)
 TechPeaksFeed::Application.initialize!
 
 # Load feeds
-FeedEntry.fetch_feed
+# FeedEntry.fetch_feed

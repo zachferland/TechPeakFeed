@@ -15,13 +15,13 @@ class FeedEntry < ActiveRecord::Base
   end
 
 
-  # def self.update_feed
-  # 	User.all.each do |user|
-  # 		feed_url = user.feed
-  # 		feed = Feedzirra::Feed.update(feed_url)
-  # 		add_entries(feed.entries, user.id) if feed.new_entries.exists?
-  # 	end
-  # end
+  def self.update_feed
+  	User.all.each do |user|
+  		feed_url = user.feed
+  		feed = Feedzirra::Feed.update(feed_url)
+  		add_entries(feed.entries, user.id) if feed.new_entries.exists?
+  	end
+  end
 
   private 
   def self.add_entries(entries, user)
