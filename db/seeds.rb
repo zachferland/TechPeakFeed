@@ -23,13 +23,13 @@ User.create(name: 'Melissa Perri', image: 'melissa-perri.png', feed: 'http://mel
 
 # add photos still
 
-# User.create(name: 'Antonio La Barba', image: 'antonio-labarba.png', feed: 'http://antoniolabarba.com/feed/')
+User.create(name: 'Antonio La Barba', image: 'antonio-labarba.png', feed: 'http://antoniolabarba.com/feed/')
 
-# User.create(name: 'Damiano Gui', image: 'damiano-gui.png', feed: 'https://medium.com/feed/@damianogui/')
+User.create(name: 'Damiano Gui', image: 'damiano-gui.png', feed: 'https://medium.com/feed/@damianogui/')
 
-# User.create(name: "Simone D'Amico", image: 'simone-damico.png', feed: 'http://mightypirate.com/feed')
+# User.create(name: "Simone D'Amico", image: 'simone-damico.png', feed: 'http://feeds.feedburner.com/mightypirate/kWiJ?format=xml')
 
-# User.create(name: "Fannabee", image: 'fannabee.png', feed: 'http://blog.fannabee.com/rss')
+User.create(name: "Fannabee", image: 'fannabee.png', feed: 'http://blog.fannabee.com/rss')
 
 # User.create(name: "Klemen Hrovat", image: 'klemen-hrovat.png', feed: 'http://klemenhrovat.blogspot.com/feeds/posts/default')
 

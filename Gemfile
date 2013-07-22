@@ -9,7 +9,7 @@ gem "pg", "~> 0.15.1"
 
 gem "thin", "~> 1.5.1"
 
-gem "feedzirra", "~> 0.1.3"
+gem "feedzirra"
 
 gem "taps", "~> 0.3.24"
 
