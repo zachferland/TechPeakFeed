@@ -2,6 +2,8 @@ include ActionView::Helpers::SanitizeHelper
 
 class FeedEntry < ActiveRecord::Base
 
+	belongs_to :user
+
   require 'htmlentities'
 
   def self.fetch_feed
