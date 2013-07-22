@@ -5,20 +5,17 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'pg'
+gem "pg", "~> 0.15.1"
 
-gem 'thin'
+gem "thin", "~> 1.5.1"
 
-gem 'feedzirra'
+gem "feedzirra", "~> 0.1.3"
 
-gem 'heroku'
+gem "taps", "~> 0.3.24"
 
-gem 'taps'
+gem "whenever", "~> 0.8.3"
 
-gem 'whenever'
-
-gem 'htmlentities'
+gem "htmlentities", "~> 4.3.1"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
