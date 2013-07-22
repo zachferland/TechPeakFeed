@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 
 User.create(name: 'Bianca Welds', image: 'bianca-welds.png', feed: 'http://blog.biancawelds.com/feed/')
 
@@ -21,8 +13,6 @@ User.create(name: 'Pavel Šimeček', image: 'pavel-simecek.png', feed: 'http://b
 
 User.create(name: 'Melissa Perri', image: 'melissa-perri.png', feed: 'http://melissaperri.tumblr.com/rss')
 
-# add photos still
-
 User.create(name: 'Antonio La Barba', image: 'antonio-labarba.png', feed: 'http://antoniolabarba.com/feed/')
 
 User.create(name: 'Damiano Gui', image: 'damiano-gui.png', feed: 'https://medium.com/feed/@damianogui/')
@@ -35,7 +25,7 @@ User.create(name: "Klemen Hrovat", image: 'klemen-hrovat.png', feed: 'http://kle
 
 User.create(name: "Alessandro Marchesini", image: 'alessandro-m.png', feed: 'http://amarchesini.blogspot.com/feeds/posts/default')
 
-User.create(name: "Daria Batukhtina", image: 'daria-Batukhtina.png', feed: 'http://amarchesini.blogspot.com/feeds/posts/default')
+User.create(name: "Michele Ruini", image: 'michele-ruini.png', feed: 'https://medium.com/feed/@pentolaccia')
 
 
 

@@ -4,8 +4,6 @@ class FeedEntry < ActiveRecord::Base
 
   belongs_to :user
 
-  # require 'htmlentities'
-
   def self.fetch_feed
   	User.all.each do |user|
   		feed_url = user.feed
@@ -13,7 +11,6 @@ class FeedEntry < ActiveRecord::Base
   		add_entries(feed.entries, user.id)
 	end
   end
-
 
   def self.update_feed
   	User.all.each do |user|
@@ -26,17 +23,10 @@ class FeedEntry < ActiveRecord::Base
   private 
   def self.add_entries(entries, user)
   	entries.each do |entry|
-      unless exists? :guid => entry.id
-      	#atom must acess content, while rss should acess summary
-      	post_content = entry.summary
-      	post_content = entry.content if post_content.nil?
-
-      	stripped_summary = strip_tags(post_content)
-      	decoder = HTMLEntities.new
-      	decoded_summary = decoder.decode(stripped_summary)
+      unless exists? :guid => entry.id	
         create!(
           :name         => entry.title,
-          :summary      => decoded_summary,
+          :summary      => clean_summary(entry),
           :url          => entry.url,
           :published_at => entry.published,
           :guid         => entry.id,
@@ -44,6 +34,17 @@ class FeedEntry < ActiveRecord::Base
         )
       end
     end
+  end
+
+  private 
+  def self.clean_summary(entry)
+  	#atom must access content, while rss should access summary
+    post_content = entry.summary
+    post_content = entry.content if post_content.nil?
+
+    stripped_summary = strip_tags(post_content)
+    decoder = HTMLEntities.new
+    decoder.decode(stripped_summary)
   end
 
 end
