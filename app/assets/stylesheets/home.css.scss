@@ -1,25 +1,48 @@
-$blue: #3381e3;
+//Global Variables & Mixins
+$blue: #3381e3; //buttons and headings
+$sub-text: #c4c5c7; //light-grey
+$main-text: #333; //dark-grey
+$border: 1px #dbdbdb solid;
+
+@mixin button-blue($height, $width) {
+	background-color: $blue;
+	font-weight: 200;
+	color: #fff;
+	height: $height;
+	width: $width;
+	display: block;
+	text-align: center;
+	padding: .8em 0 0 0;
+	font-size: 1.4em;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	text-transform: uppercase;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	&:hover { background-color: #3f8cec; }
+}
+
+// CSS
 
 body {
   margin: 0;
-  margin-bottom: 25px;
   padding: 0;
-  background-color: #fff;
   font-family: Georgia;
-  font-size: 13px;
-  color: #333;
 }
 
 .content {
   display: block;
   position: absolute;
   right: 0;
-  margin-right: 37%;
   top: 0;
   bottom: 0;
+  margin-right: 37%;
   background-color: #fff;
   -webkit-overflow-scrolling: touch;
 }
+
+//Menu Styling
 
 .menu	{
   position: fixed;
@@ -29,7 +52,8 @@ body {
   width: 30%;
   height: 100%;
   max-width: 500px;
-  background-color: #000;
+
+  p { color: #fff;}
 
   .menu-img {
 	position: absolute;
@@ -56,7 +80,6 @@ body {
   }
 
   #description p {
-  	color: #fff;
   	text-align: center;
   	width: 75%;
   	margin: 60px auto 0 auto;
@@ -66,7 +89,6 @@ body {
   }
 
   #built-by p{
-  	color: #fff;
   	line-height: 1.635em;
 	font-size: 1em;
 	-webkit-font-smoothing: antialiased;
@@ -76,55 +98,27 @@ body {
 	text-align: right;
 	margin: 0 15px 10px 0;
 	font-style: italic;
-
-
 	a {
-		color: #e07628;
-		text-decoration: none;
+	  color: #e07628;
+	  text-decoration: none;
+	  &:hover { text-decoration: underline; }
 	}
   }
 
   .button-blue a{
-	 background-color: $blue;
-	 font-weight: 200;
-	 color: #fff;
-	 height: 35px;
-	 width: 60%;
-	 display: block;
-	 text-align: center;
-	 padding: .8em 0 0 0;
-	 font-size: 1.4em;
-	 margin-top: 35px;
-	 -moz-border-radius: 4px;
-	 -webkit-border-radius: 4px;
-	 border-radius: 4px;
-	 text-transform: uppercase;
-	 text-decoration: none;
-	 -webkit-font-smoothing: antialiased;
+	 @include button-blue(35px, 60%);
 	 margin: 30px auto 0 auto;
-
-	 &:hover { background-color: #3f8cec }
   }
 }
 
-
-.recent-post {
-	border-top: 1px #dbdbdb solid;
-	margin-left: 14em;
-	text-transform: uppercase;
-	color: #c4c5c7;
-	margin-top: 5em;
-	padding: .2em 0;
-	width: 40em;
-	letter-spacing: 1px;
-}
+//Post Styling
 
 .post {
 
   .pub-image {
   	width: 10em;
-  	float: left;
   	height: 10em;
+  	float: left;
   	overflow: hidden;
   	margin-top: 3em;
   	-moz-border-radius: 5em;
@@ -134,78 +128,62 @@ body {
 
   .text-container {
     width: 40em;
-    float: left;
     height: auto;
+    float: left;
     margin: 0 0 0 4em;
     padding: 2em 0 3em 0;
-    border-top: 1px #dbdbdb solid;
-    border-bottom: 1px #dbdbdb solid;
+    border-top: $border;
+    border-bottom: $border;
 
     .title {
-  	
+      margin-bottom: 5px;
+      a {
+  	   font-family: acta-display, Georgia, Times, serif;
+	   font-size: 2em;
+	   color: $blue;
+	   font-weight: normal;
+	   margin-top: 1em;
+	   text-decoration: none;
+	   line-height: 1.2em;
+	   &:hover {
+	     color: #3f8cec;
+	     background-color: none; 
+	    }
+	  }
   	}
 
   	.summary {
-
+	  line-height: 1.635em;
+	  margin: 2em 0 1em 0;
+	  font-size: 1.3em;
+	  color: $main-text;
+	  -webkit-font-smoothing: antialiased;
   	}
 
   	.author {
 	  font-size: 1.1em;
-	  color: #c4c5c7;
+	  color: $sub-text;
 	  font-weight: normal;
 	  text-transform: uppercase;
-	  margin-top: 3px;
+	  margin-top: .6em;
   	}
 
-  	p {
-	  line-height: 1.635em;
-	  margin: 2em 0 1em 0;
-	  font-size: 1.3em;
-	  color: #333;
-	  -webkit-font-smoothing: antialiased;
-	}
-
-	h2 a {
-	  font-family: acta-display, Georgia, Times, serif;
-	  font-size: 2em;
-	  color: $blue;
-	  font-weight: normal;
-	  margin-top: 1em;
-	  text-decoration: none;
-	  line-height: 1.2em;
-	  &:hover {
-	  	color: #3f8cec;
-	  	background-color: none; 
-	  }
-	}
-
-	h2 {
-	  margin-bottom: 5px;
-	}
-
-
-
 	.button-blue a{
-	  background-color: $blue;
-	  font-weight: 200;
-	  color: #fff;
-	  height: 35px;
-	  width: 200px;
-	  display: block;
-	  text-align: center;
-	  padding: .8em 0 0 0;
-	  font-size: 1.4em;
-	  margin-top: 35px;
-	  -moz-border-radius: 4px;
-	  -webkit-border-radius: 4px;
-	  border-radius: 4px;
-	  text-transform: uppercase;
-	  text-decoration: none;
-	  -webkit-font-smoothing: antialiased;
-
-	  &:hover { background-color: #3f8cec }
+	  @include button-blue(35px, 200px);
+	  margin: 35px 0 0 0;
 	}
 
   }
+}
+
+.recent-post {
+	border-top: $border;
+	margin-left: 14em;
+	text-transform: uppercase;
+	color: $sub-text;
+	margin-top: 5em;
+	padding: .2em 0;
+	width: 40em;
+	letter-spacing: 1px;
 }
 
