@@ -149,6 +149,14 @@ body {
 
   	}
 
+  	.author {
+	  font-size: 1.1em;
+	  color: #c4c5c7;
+	  font-weight: normal;
+	  text-transform: uppercase;
+	  margin-top: 3px;
+  	}
+
   	p {
 	  line-height: 1.635em;
 	  margin: 2em 0 1em 0;
@@ -170,6 +178,12 @@ body {
 	  	background-color: none; 
 	  }
 	}
+
+	h2 {
+	  margin-bottom: 5px;
+	}
+
+
 
 	.button-blue a{
 	  background-color: $blue;

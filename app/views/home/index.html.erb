@@ -1,6 +1,6 @@
 
 <section class="content">
-
+<%= Time.now.strftime("%Y-%m-%d") %>
 
 <div class="recent-post">
   <p>Most Recent Posts By TechPeakers</p>
@@ -11,19 +11,25 @@
       <div class="pub-image">
       <% for person in User.where(:id => entry.publisher_id) %>
         <%= image_tag person.image %>
-      <% end %>
+
       </div>
+
       <div class="text-container">
       <h2><%= link_to h(entry.name), entry.url %></h2>
+      <p class="author"> By <%= person.name %> </p>
       <p><%=h truncate(entry.summary, :length => 210)%>.</p>
       <div class="button-blue"> 
         <%= link_to "Read More", entry.url%>
       </div>
 
+
+      <% end %>
+      <!-- ends person -->
       </div>
   </div>
-    <% end %>
 
+    <% end %>   
+    <!-- ends feed entry loop -->
 
 </section>
 
