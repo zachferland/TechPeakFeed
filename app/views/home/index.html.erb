@@ -14,12 +14,12 @@
       </div>
 
       <div class="text-container">
-        <h2 class="title"><%= link_to h(entry.name), entry.url %></h2>
+        <h2 class="title"><%= link_to h(entry.name), entry.url, :target => '_blank' %></h2>
         <p class="author"> By <%= person.name %> </p>
         <p class="summary"><%=h truncate(entry.summary, :length => 210)%>.</p>
 
         <div class="button-blue"> 
-          <%= link_to "Read More", entry.url%>
+          <%= link_to "Read More", entry.url, :target => '_blank'%>
         </div>
 
         <% end %>
@@ -37,10 +37,10 @@
       <p>A blog feed of all the individuals and companies participating in the current classTechPeaks.</p>
     </div>
     <div class="button-blue">
-      <%= link_to "Learn More", "http://techpeaks.eu"%>
+      <%= link_to "Learn More", "http://techpeaks.eu", :target => '_blank'%>
     </div>
     <div id="built-by">
-      <p>Built by <%= link_to "@zachferland", "https://twitter.com/zachferland"%> in Trento, Italy</p>
+      <p>Built by <%= link_to "@zachferland", "https://twitter.com/zachferland", :target => '_blank'%> in Trento, Italy</p>
     </div>
   </div>
 </section>
