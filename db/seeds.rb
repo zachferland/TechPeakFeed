@@ -19,11 +19,11 @@ User.create(name: 'Damiano Gui', image: 'damiano-gui.png', feed: 'https://medium
 
 User.create(name: "Simone D'Amico", image: 'simone-damico.png', feed: 'http://feeds.feedburner.com/mightypirate/kWiJ?format=xml')
 
-User.create(name: "Fannabee", image: 'fannabee.png', feed: 'http://blog.fannabee.com/rss')
+# User.create(name: "Fannabee", image: 'fannabee.png', feed: 'http://blog.fannabee.com/rss')
 
 User.create(name: "Klemen Hrovat", image: 'klemen-hrovat.png', feed: 'http://klemenhrovat.blogspot.com/feeds/posts/default')
 
-User.create(name: "Alessandro Marchesini", image: 'alessandro-m.png', feed: 'http://amarchesini.blogspot.com/feeds/posts/default')
+# User.create(name: "Alessandro Marchesini", image: 'alessandro-m.png', feed: 'http://amarchesini.blogspot.com/feeds/posts/default')
 
 User.create(name: "Michele Ruini", image: 'michele-ruini.png', feed: 'https://medium.com/feed/@pentolaccia')
 
